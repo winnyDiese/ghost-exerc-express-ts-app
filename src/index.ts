@@ -7,9 +7,15 @@ app.set('views','./views')
 
 
 // app.get('/', (req:Request, res: Response) => {
-//     res.send('<h1>Bienvenue sur ma page Express avec TypeScript !</h1>');
-// } )
+    //     res.send('<h1>Bienvenue sur ma page Express avec TypeScript !</h1>');
+    // } )
+    
 
+app.get('/', (req:Request, res: Response) => {
+    const message = 'Bienvenue sur ma page Express avec EJS et TypeScript!';
+
+    res.render('index', {message})
+})
 
 
 app.listen(port, ()=>{
